@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+{% extends "bootstrap/base.html" %}
+
+{% block content %}
+<body>
+<p> Start Date: {{ calendar1 }} <p/>
+<p> Quit Date: {{ calendar2 }} </p>
+<p> Starting Dose: {{start_dose }} </p>
+<p> Final Dose:  {{final_dose}} </p>
+
+
+      <table border = 1>
+        <th> Day </th>
+        <th> Dose </th>
+         {% for x, y in zip(date_list, dose) %}
+            <tr>
+               <td> Day {{ x }} </td>
+               <td> Dose {{ y }} </td>
+            </tr>
+         {% endfor %}
+      </table>
+ </body>
+{%endblock%}
+
+
+</html>
+
+

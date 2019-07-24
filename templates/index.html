@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+{% extends "bootstrap/base.html" %}
+{% block content %}
+
+<h3> Purpose </h3>
+<p> This app will determine a taper schedule based on a Start Date, Quit Date, Start Dose and Final Dose</p>
+<h3> Instructions </h3>
+<ol>
+    <li> Start Dose is equal to your current dose </li>
+    <li> Final Dose is the dose you would like to quit at. </li>
+    <li> Start Date is the date to being your taper </li>
+    <li> Final Date is the date to end your taper </li>
+</ol>
+<br>
+<form method=post action="">
+
+    <p> Enter start Dose {{ form.start_dose }} </p>
+
+    <p> Enter final Dose {{ form.final_dose }} </p>
+
+    <p> Enter Start Date{{ form.calendar1(class='datepicker') }}</p>
+
+    <p> Enter Quit Date {{ form.calendar2(class='datepicker') }}</p>
+    <input class="btn btn-primary" type="submit" value="Submit">
+    </form>
+
+
+
+{%endblock%}
+</html>
